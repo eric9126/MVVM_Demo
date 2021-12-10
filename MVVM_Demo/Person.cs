@@ -6,9 +6,34 @@ using System.Threading.Tasks;
 
 namespace MVVM_Demo
 {
-    public class Person
+    public class Person : ModelBase
     {
-        public string Name { get; set; }
-        public string Vorname { get; set; }
+        string name;
+        public string Name 
+        {
+            get { return name; }
+            set
+            {
+                if (name != value)
+                {
+                    name = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        string vorname;
+        public string Vorname
+        {
+            get { return vorname; }
+            set
+            {
+                if (vorname != value)
+                {
+                    vorname = value;
+                    OnPropertyChanged();
+
+                }
+            }
+        }
     }
 }

@@ -23,6 +23,11 @@ namespace MVVM_Demo
             InitializeComponent();
             
         }
+
+        private void BTNSpeichern_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindowViewModel.PersonList.Add(new Person() { Name = TBName.Text, Vorname = TBVorname.Text});
+        }
     }
 
 }

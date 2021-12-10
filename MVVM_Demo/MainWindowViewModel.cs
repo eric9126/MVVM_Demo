@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace MVVM_Demo
     public class MainWindowViewModel
     {
         public Person Person { get; set; }
-        public List<Person> PersonList { get; set; }
+        public static ObservableCollection<Person> PersonList { get; set; }
 
         public MainWindowViewModel()
         {
@@ -20,7 +21,7 @@ namespace MVVM_Demo
                 Vorname = "Tester"
             };
 
-            PersonList = new List<Person>
+            PersonList = new ObservableCollection<Person>
             {                
 
                 new Person()

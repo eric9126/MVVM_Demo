@@ -19,8 +19,11 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0">
-            <TextBlock Text="{Binding Person.Name, Source={StaticResource vm}}"/>
-            <TextBlock Text="{Binding Person.Vorname, Source={StaticResource vm}}"/>
+            <TextBox x:Name="TBName"/>
+            <TextBox x:Name="TBVorname"/>
+            <Button x:Name="BTNSpeichern" Content="Speichern" Width="100" Click="BTNSpeichern_Click"/>
+            <!--<TextBlock Text="{Binding Person.Name, Source={StaticResource vm}}"/>
+            <TextBlock Text="{Binding Person.Vorname, Source={StaticResource vm}}"/>-->
         </StackPanel>
 
         <DataGrid Grid.Row="1" AutoGenerateColumns="False" ItemsSource="{Binding PersonList, Source={StaticResource vm}}">
